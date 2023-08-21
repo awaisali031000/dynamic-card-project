@@ -1,0 +1,263 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand" style="color: white" href="#">Dynamic Card</a>
+</nav>
+
+
+
+<div class="cards-container">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <p style="margin-top: 15px;">Occupation</p>
+        <div class="icon-container">
+          <div
+            class="icon-item"
+            data-toggle="modal"
+            data-target="#viewModal"
+            (click)="handleIconEyeClick()"
+          >
+            <span class="icon-text" style="margin-bottom: 15px">View</span>
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <div
+            class="icon-item message-css"
+            data-toggle="modal"
+            data-target="#queryModal"
+            (click)="handleIconQueryClick('Occupation')"
+          >
+            <span class="icon-text" style="margin-bottom: 15px">Raise a Query</span>
+            <i class="fa-solid fa-message"></i>
+          </div>
+          <div class="icon-item circle-dot-css">
+            <span class="icon-text" style="margin-top: -4px">Agree</span>
+            <label class="checkbox-label">
+              <input
+                type="checkbox"
+                name="agreement"
+                [(ngModel)]="occupationAgreed"
+                [attr.disabled]="occupationAgreed ? true : null"
+                (click)="handleIconClick('Occupation')"
+              />
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4"><div class="card">
+    <div class="card-body">
+      <p style="margin-top: 15px;">TurnOverRent</p>
+      <div class="icon-container">
+        <div
+          class="icon-item"
+          data-toggle="modal"
+          data-target="#viewModal"
+          (click)="handleIconEyeClick()"
+        >
+          <span class="icon-text" style="margin-bottom: 15px">View</span>
+          <i class="fa-solid fa-eye"></i>
+        </div>
+        <div
+          class="icon-item message-css"
+          data-toggle="modal"
+          data-target="#queryModal"
+          (click)="handleIconQueryClick('TurnOverRent')"
+        >
+          <span class="icon-text" style="margin-bottom: 15px">Raise a Query</span>
+          <i class="fa-solid fa-message"></i>
+        </div>
+        <div class="icon-item circle-dot-css">
+          <span class="icon-text" style="margin-top: -4px">Agree</span>
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="agreement"
+              [(ngModel)]="turnOverRentAgreed"
+              [attr.disabled]="turnOverRentAgreed ? true : null"
+              (click)="handleIconClick('TurnOverRent')"
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+  </div></div>
+  <div class="col-md-4"><div class="card">
+    <div class="card-body">
+      <p style="margin-top: 15px;">GurrentedSchedule</p>
+      <div class="icon-container">
+        <div
+          class="icon-item"
+          data-toggle="modal"
+          data-target="#viewModal"
+          (click)="handleIconEyeClick()"
+        >
+          <span class="icon-text" style="margin-bottom: 15px">View</span>
+          <i class="fa-solid fa-eye"></i>
+        </div>
+        <div
+          class="icon-item message-css"
+          data-toggle="modal"
+          data-target="#queryModal"
+          (click)="handleIconQueryClick('GurrentedSchedule')"
+        >
+          <span class="icon-text" style="margin-bottom: 15px">Raise a Query</span>
+          <i class="fa-solid fa-message"></i>
+        </div>
+        <div class="icon-item circle-dot-css">
+          <span class="icon-text" style="margin-top: -4px">Agree</span>
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="agreement"
+              [(ngModel)]="gurrentedScheduleAgreed"
+              [attr.disabled]="gurrentedScheduleAgreed ? true : null"
+              (click)="handleIconClick('GurrentedSchedule')"
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+  </div></div>
+  <div class="col-md-4"><div class="card">
+    <div class="card-body">
+      <p style="margin-top: 15px;">ServiceChargeSchedule</p>
+      <div class="icon-container">
+        <div
+          class="icon-item"
+          data-toggle="modal"
+          data-target="#viewModal"
+          (click)="handleIconEyeClick()"
+        >
+          <span class="icon-text" style="margin-bottom: 15px">View</span>
+          <i class="fa-solid fa-eye"></i>
+        </div>
+        <div
+          class="icon-item message-css"
+          data-toggle="modal"
+          data-target="#queryModal"
+          (click)="handleIconQueryClick('ServiceChargeSchedule')"
+        >
+          <span class="icon-text" style="margin-bottom: 15px">Raise a Query</span>
+          <i class="fa-solid fa-message"></i>
+        </div>
+        <div class="icon-item circle-dot-css">
+          <span class="icon-text" style="margin-top: -4px">Agree</span>
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="agreement"
+              [(ngModel)]="serviceChargeScheduleAgreed"
+              [attr.disabled]="serviceChargeScheduleAgreed ? true : null"
+              (click)="handleIconClick('ServiceChargeSchedule')"
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+  </div></div>
+  </div>
+
+<div
+  class="modal fade"
+  id="viewModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">View</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">Hello World</div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="queryModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document" style="max-width: 80%">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">View</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          (click)="handleViewCloseIconClick()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Comment</th>
+              <th scope="col">Created By</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dynamicCardData of cardsToDisplay">
+              <th scope="row">{{ dynamicCardData.dynamicCardId }}</th>
+              <td>{{ dynamicCardData.comment }}</td>
+              <td>{{ dynamicCardData.createdBy }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="d-flex justify-content-between p-2">
+          <ngb-pagination
+            [collectionSize]="collectionSize"
+            [(page)]="page"
+            [pageSize]="pageSize"
+            (pageChange)="handlePageChange($event)"
+          ></ngb-pagination>
+        
+          <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="handlePageSizeChange($event)">
+            <option [ngValue]="2">2 items per page</option>
+            <option [ngValue]="4">4 items per page</option>
+            <option [ngValue]="6">6 items per page</option>
+          </select>
+        </div>
+
+        <form [formGroup]="commentForm" (ngSubmit)="addFormName()">
+          <div class="form-group">
+            <label>Comment</label>
+            <input
+              class="form-control"
+              formControlName="comment"
+              placeholder="Enter Comment"
+            />
+          </div>
+          <button
+            type="submit"
+            [disabled]="!commentForm.valid"
+            class="btn btn-primary"
+          >
+            Submit Comment
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9pesO6KcqW01E2E6dfRWXoASSfE8yq9LznevSLsXfPg=",
+  "Source": "DynamicCard-API",
+  "BasePath": "_content/DynamicCard-API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
